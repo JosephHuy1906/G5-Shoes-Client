@@ -28,7 +28,7 @@ const slideImages = [
         caption: 'Slide 1',
     },
     {
-        url: '/images/banner2.png',
+        url: '/images/banner3.jpg',
         caption: 'Slide 2',
     },
     {
@@ -41,7 +41,6 @@ function Home() {
     return (
         <div className={cx('grid wide')}>
             <div className={cx('banner')}>
-               
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>

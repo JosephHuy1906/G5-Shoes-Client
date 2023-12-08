@@ -21,7 +21,7 @@ interface Imenu {
 function SideBarNavigation({ popup }: Imenu) {
     return (
         <div className={cx('sidebar')}>
-            <div className={cx('sidebar-overlay')}></div>
+            <div onClick={() => popup(true)} className={cx('sidebar-overlay')}></div>
             <div className={cx('sidebar__wrapper')}>
                 <button type="button" onClick={() => popup(true)} className={cx('sidebar__wrapper-close')}>
                     <CloseIcon width="70" height="70" />

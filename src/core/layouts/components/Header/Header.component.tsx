@@ -7,6 +7,7 @@ import HeaderAuth from './HeaderAuth/HeaderAuth.component';
 import Image from 'next/image';
 import classNames from 'classnames/bind';
 import { BellRingIcon, CartIcon, MenuIcon, SearchIcon, UserIcon } from '@/shared/components/Svg/index.component';
+import InputSearchComponent from '@/shared/components/InputSearch/InputSearch.component';
 
 const cx = classNames.bind(styles);
 
@@ -42,11 +43,12 @@ function HeaderComponent({ popup }: Imenu) {
                                 <ul className={cx('header__list-search-ul')}></ul>
                             </div>
                         </div>
+                        {/* <InputSearchComponent /> */}
                     </div>
-                    <Link rel="preload" as="image" href={'/'} className={cx('header__logo')}>
+                    <Link href={'/'} rel="preload" className={cx('header__logo')}>
                         <Image
                             src={'/images/logo-chinh.jpg'}
-                            alt="image"
+                            alt=""
                             className={cx('header__logo-Image')}
                             width={50}
                             priority
@@ -56,7 +58,7 @@ function HeaderComponent({ popup }: Imenu) {
                     <div className={cx('header__information')}>
                         <ul className={cx('header__information-list')}>
                             <li className={cx('header__information-item')}>
-                                <Link href="./login" className={cx('header__information-link')}>
+                                <Link href="/login" className={cx('header__information-link')}>
                                     <UserIcon width="800" height="800" className={cx('user-icon')} />
                                 </Link>
                             </li>
@@ -98,7 +100,7 @@ function HeaderComponent({ popup }: Imenu) {
                                             </li>
 
                                             <li className={cx('header__notification-item')}>
-                                                <a href="" className={cx('header__notification-link')}>
+                                                <Link href="/" className={cx('header__notification-link')}>
                                                     <div className={cx('header__notification-avatar-user')}>
                                                         <Image
                                                             src="/images/logo-chinh.jpg"
@@ -121,7 +123,7 @@ function HeaderComponent({ popup }: Imenu) {
                                                     <div className={cx('header__notification-remove')}>
                                                         <i className={cx('fa-regular fa-trash-can')}></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>
