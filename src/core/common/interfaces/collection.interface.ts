@@ -1,31 +1,45 @@
 import { ROLE_CUSTOMER } from '../constants/common.constant';
 
 export interface IUser {
-    _id: string;
+    id: string;
     email: string;
     name: string;
-    refreshToken: string;
-    password?: string;
-    avatarUrl?: string;
-    locale?: string;
-    isPendingUpgradeComposer?: boolean;
+    address?: string;
+    password: string;
+    avatar?: string;
+    phone?: string;
+    levelID: number;
     createdAt?: Date;
     updatedAt?: Date;
 }
 export interface IProduct {
-    _id: string;
+    id: string;
     name: string;
     img1: string;
     img2: string;
     img3: string;
     img4: string;
-    price: number;
+    oldPrice: number;
+    newPrice: number;
+    categoryID: string;
+    description: string;
     size: number;
     createdAt?: Date;
     updatedAt?: Date;
 }
 
+export interface ICart {
+    id: string;
+    name: string;
+    price: number;
+    img1: string;
+    sale: string;
+    total: number;
+    size: number | null;
+    quantity: number;
+}
 
-export interface ISearch{
+
+export interface ISearch {
     product: IProduct[];
 }

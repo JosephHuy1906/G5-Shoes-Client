@@ -1,5 +1,5 @@
 
-import CheckoutComponent from '@/core/layouts/pages/Checkout/Checkout.componet';
+import CheckoutComponent from '@/core/layouts/pages/Checkout/Checkout.page';
 
 function Page() {
     return <CheckoutComponent />;

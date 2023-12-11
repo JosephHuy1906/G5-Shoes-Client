@@ -12,3 +12,24 @@ export const formatDate = (input: string, type?: EDateFormat): string => {
             return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
     }
 };
+
+export const formatMonneyCurrency = (amount: number): string => {
+    if (isNaN(amount)) return '';
+
+    // Sử dụng hàm toLocaleString để định dạng số thành chuỗi có dấu phẩy phân cách hàng nghìn
+    const formattedAmount = amount.toLocaleString('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
+
+    return formattedAmount;
+};
+
+export const calculateDiscountPercentage = (oldPrice: number, newPrice: number) => {
+    if (oldPrice > 0) {
+        const discountPercentage = ((oldPrice - newPrice) / oldPrice) * 100;
+        return isFinite(discountPercentage) ? Math.round(discountPercentage) : 0;
+    } else {
+        return 0;
+    }
+}

@@ -130,6 +130,9 @@
   padding: 0 10px;
   font-weight: 500;
 }
+.main__wrapper-box-component-input:disabled{
+  background-color: lightgrey;
+}
 
 .main__wrapper-box-component-input-address {
   width: 100%;
@@ -219,11 +222,10 @@
 }
 
 .main__wrapper-box-img {
-  padding-top: 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #5ec9dd;
 }
 
 .main__wrapper-box-detail {
@@ -259,15 +261,6 @@
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-}
-
-.main__wrapper-box-detail-btn-remove:hover {
-  background-color: #ccc;
-}
-
-.main__wrapper-box-detail-btn-remove i {
-  font-size: 1.6rem;
-  color: #666;
 }
 
 .main__wrapper-box-detail-desc {

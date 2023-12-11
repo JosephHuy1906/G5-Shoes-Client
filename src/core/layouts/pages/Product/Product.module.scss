@@ -21,6 +21,10 @@
     transform: translateY(-50%);
 }
 
+.col {
+    margin-bottom: 30px;
+}
+
 .banner__btn.right {
     top: 50%;
     right: 14px;
@@ -35,8 +39,28 @@
     border-radius: 20px;
 }
 
-.main {
-    margin-top: calc(var(--height-header) + 30px);
+.new {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: #eb3482;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.giamgia {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: #eb3482;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.giamgia,
+.new p {
+    line-height: 40px;
+    text-align: center;
+    color: yellow;
+    font-weight: 600;
 }
 
 .slide a button {
@@ -54,20 +78,11 @@
 /* // main css */
 .main__wrapper {
     margin-top: calc(var(--height-header) + 40px);
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col {
-    margin-bottom: 30px;
+    margin-left: 3rem;
 }
 
 .main__product {
     margin-top: 30px;
-    padding: 0 10% 10% 10%;
 }
 
 .main__product-wrapper {
@@ -96,23 +111,39 @@
 .main__product-box-picture {
     background-color: #5ec9dd;
     border-radius: 20px;
+    width: 270px;
+    height: 180px;
+    position: relative;
+    // overflow: hidden;
+}
+
+.main__product-box-img-new {
+    width: 280px;
+    height: 200px;
+    border-radius: 20px;
 }
 
 .main__product-box-picture.news {
-    background-color: transparent;
-}
-
-.main__product-box-img.news {
-    border-radius: 20px;
-    background-size: cover;
+    padding-top: 0%;
 }
 
 .main__product-box-img {
-    padding-top: 70%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 180px;
+    width: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
 }
+
+.main__product-box-img-banner {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 
 .main__product-box-title {
     font-size: 1.8rem;
@@ -120,13 +151,16 @@
     margin-top: 6px;
 }
 
+
 .main__product-box-title.news {
-    font-size: 1.4rem;
-    height: 6rem;
+    font-size: 1.8rem;
+    color: #181821;
+    margin-top: 6px;
+    max-height: 3rem;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
 }
 
 .main__product-box-price {
@@ -195,69 +229,58 @@
     background-color: yellow;
 }
 
-.grid.wide {
-    max-width: 1200px;
-    margin: 0 auto;
+.main__product-box-title {
+    font-size: 1.8rem;
+    color: #181821;
+    margin-top: 6px;
+    max-height: 3rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
-.main-part {
-    font-size: 2rem;
-    color: var(--text-color);
-    margin-bottom: 20px;
+
+
+@media (max-width: 400px) {
+    .main__product-box-price {
+        flex-wrap: wrap;
+    }
+
+    .main__product-box-current-price {
+        font-size: 1.3rem;
+    }
+
+    .main__product-box-old-price {
+        font-size: 1.2rem;
+    }
 }
 
-.giamgia {
-    position: absolute;
-    width: 60px;
-    height: 40px;
-    background: #eb3482;
-    border-radius: 10px 0px 10px 0px;
-}
-
-.giamgia p {
-    line-height: 40px;
-    text-align: center;
-    color: yellow;
-    font-weight: 600;
-}
-
+/* Mobile reponsive */
 @media (max-width: 715px) {
     .main__product-box-img {
-        width: 150px;
-        height: 150px;
-        background-size: cover;
-        background-position: center;
-        margin: 0 auto;
-    }
-
-    .main__product-box {
-        width: 150px;
-    }
-}
-
-@media (max-width: 1022px) {
-    .row {
-        justify-content: center;
-    }
-
-    .main__product-box-img {
-        width: 150px;
-        height: 150px;
-        background-size: cover;
-        background-position: center;
-        margin: 0 auto;
-    }
-
-    .main__product-box {
-        width: 150px;
-    }
-
-    .main__product-box-picture {
-        width: 250px;
-        height: 150px;
+        padding-top: 60%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .main__product-box-title {
-        width: 200px;
+        font-size: 1.8rem;
+        color: #181821;
+        margin-top: 6px;
+        max-height: 3rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
     }
+
+
+}
+
+.pagination {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
 }

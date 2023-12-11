@@ -56,8 +56,8 @@ function InputSearchComponent(): ReactNode {
                                                 {searchResult && searchResult.product.length > 0 && (
                                                     <>
                                                         <h3 className={cx('title-search')}>Product</h3>
-                                                        {searchResult.product.map((result) => (
-                                                            <li key={result._id} className={cx('popper-search-item')}>
+                                                        {searchResult.product.map((result, index) => (
+                                                            <li key={index} className={cx('popper-search-item')}>
                                                                 <div className={cx('popper-search-content')}>
                                                                     <Link
                                                                         href={'/composer/@' + result.name}

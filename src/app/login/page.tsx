@@ -1,7 +1,7 @@
-import LoginComponent from '@/core/layouts/pages/Login/Login.component';
+import LoginPage from '@/core/layouts/pages/Login/Login.page';
 
 function Page() {
-    return <LoginComponent />;
+    return <LoginPage />;
 }
 
 export default Page;

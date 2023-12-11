@@ -1,4 +1,4 @@
-import ProfileComponent from '@/core/layouts/pages/Profile/Profile.component';
+import ProfileComponent from '@/core/layouts/pages/Profile/Profile.page';
 
 function Page() {
     return <ProfileComponent />;

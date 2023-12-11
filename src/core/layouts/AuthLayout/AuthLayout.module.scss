@@ -1,4 +1,11 @@
-.contents {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
+  
+  #root {
+    width: 100%;
+    display: block;
+  }
+  
+  .main {
+    display: flex;
+    align-items: flex-start;
+  }

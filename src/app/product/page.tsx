@@ -1,4 +1,4 @@
-import ProductComponent from '@/core/layouts/pages/Product/Product.component';
+import ProductComponent from '@/core/layouts/pages/Product/Product.page';
 
 function Page() {
     return <ProductComponent />;

@@ -1,0 +1,176 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+        width: 36%;
+        background: none;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid #cbcaca;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+
+        hr {
+            width: 98%;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 2em;
+            padding-top: 36px;
+            margin-bottom: 12px;
+        }
+
+        .form-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            justify-content: center;
+            row-gap: 20px;
+
+            a {
+                width: 95%;
+                height: 50px;
+                line-height: 40px;
+                display: grid;
+                grid-template-columns: 50px 170px;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                border: 1px solid #cbcaca;
+                border-radius: 5px;
+                color: var(--theme-mode-color);
+
+                .icon-facebook {
+                    width: 20px;
+                    height: 20px;
+                    line-height: 40px;
+                    object-fit: cover;
+                    margin: auto;
+                }
+
+                p {
+                    text-align: left;
+                    color: var(--theme-mode-color);
+                }
+            }
+
+            a:hover {
+                box-shadow: 0 0 10px #cbcaca;
+            }
+        }
+
+        & .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            margin-top: 32px;
+            width: 80%;
+            position: relative;
+            padding-bottom: 10px;
+
+
+            & .wrapper-password {
+                width: 100%;
+                position: relative;
+
+                & .btn-preview {
+                    width: 30px;
+                    padding: 4px;
+                    background: transparent;
+                    position: absolute;
+                    color: var(--theme-mode-color);
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    font-size: 1.4rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba($color: var(--text-color), $alpha: 0.1);
+                        border-radius: 8px;
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                border: 1px solid #ababab;
+                background: none;
+                padding-left: 10px;
+                border-radius: 5px;
+                color: var(--black-color);
+
+                &.invalid {
+                    border: 1px solid red;
+                }
+
+                &:placeholder-shown {
+                    color: #ccc;
+                    font-weight: 500;
+                }
+            }
+
+            & .messages {
+                height: 18px;
+
+                & .message-errors {
+                    font-size: 1.4rem;
+                    color: red;
+                    font-weight: 600;
+                }
+            }
+
+
+            .btn-submit {
+                width: 50%;
+                height: 50px;
+                border-radius: 10px;
+                background: #6363fc;
+                color: white;
+                font-weight: 500;
+                transition: 0.3s;
+                position: absolute;
+                top: 90%;
+                left: 25%;
+                cursor: pointer;
+            }
+
+            .btn-submit:not(:disabled):hover {
+                background-color: #8585ff;
+                color: white;
+            }
+        }
+
+        .forgot {
+            height: 50px;
+            line-height: 50px;
+            text-decoration: underline;
+            font-weight: 300;
+            font-style: oblique;
+            font-size: 15px;
+            color: var(--text-color);
+        }
+
+        .sub {
+            margin-top: 24px;
+            font-weight: 300;
+
+            a {
+                text-decoration: underline;
+                font-weight: 500;
+                color: var(--primary-color-Ad);
+            }
+        }
+    }
+}
